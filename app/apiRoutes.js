@@ -26,7 +26,7 @@ module.exports = function(app) {
   // Then the server saves the data to the peopleData array)
   // ---------------------------------------------------------------------------
 
-  app.post("/api/friends", function(req, res) {
+  app.post("/api/friends.js", function(req, res) {
     // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
     // It will do this by sending out the value "true" have a table
     var user = req.body;
@@ -37,7 +37,7 @@ module.exports = function(app) {
     for (var i = 0; i < peopleData.length; i++) {
       correntDiff = 0;
       for (var j = 0; j < peopleData[i].scores.length; j++) {
-        currentDiff += Math.abs(user.scores[j] - peopleData[i].scores[j]);
+        currentDiff += Math.abs(parseInt(user.scores[j]) - parseInt(peopleData[i].scores[j]);
 
       }
       if (i === 0) {
@@ -53,7 +53,7 @@ module.exports = function(app) {
 
     //display best match///////
     console.log("best Match is " +peopleData[bestMatch].name);
-    
+
   });
 
   // ---------------------------------------------------------------------------
