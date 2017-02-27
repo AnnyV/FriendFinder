@@ -6,3 +6,22 @@ img {
     vertical-align: middle;
     float: right;
 }
+
+.list{
+	float: left;
+	 margin-left: 50px;
+}
+
+footer {
+   clear: both;
+    width: 100%;
+    background-color:#bdf7be;
+    border-top: 7px solid #4aaaa5;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+
+}
